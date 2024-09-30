@@ -18,7 +18,7 @@ jobs:
     
     - name: Download OpenCL headers
       run: |
-        curl -o main.zip https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/heads/main.zip
+        curl -o main.zip https://codeload.github.com/KhronosGroup/OpenCL-Headers/zip/refs/heads/main
         Expand-Archive -Path main.zip -DestinationPath .
 
     - name: Make
