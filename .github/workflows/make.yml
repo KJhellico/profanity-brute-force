@@ -21,7 +21,7 @@ jobs:
         curl -o main.zip https://codeload.github.com/KhronosGroup/OpenCL-Headers/zip/refs/heads/main
         Expand-Archive -Path main.zip -DestinationPath .
         Move-Item -Path ".\OpenCL-Headers-main\CL" -Destination .
-        Get-ChildItem
+        Get-ChildItem -Recurse
 
     - name: Make
       run: |
