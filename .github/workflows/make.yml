@@ -16,8 +16,14 @@ jobs:
       with:
         version: 12.2
     
+    - name: Download OpenCL headers
+      run: |
+        curl -o main.zip https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/heads/main.zip
+        Expand-Archive -Path main.zip -DestinationPath .
+
     - name: Make
-      run: make all
+      run: |
+        make all
 
     - name: Check results
       shell: bash
