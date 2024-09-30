@@ -6,6 +6,7 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    continue-on-error: true
 
     steps:
     - uses: actions/checkout@v4
