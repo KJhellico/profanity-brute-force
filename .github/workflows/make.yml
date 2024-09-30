@@ -20,6 +20,7 @@ jobs:
       run: |
         curl -o main.zip https://codeload.github.com/KhronosGroup/OpenCL-Headers/zip/refs/heads/main
         Expand-Archive -Path main.zip -DestinationPath .
+        Get-ChildItem
 
     - name: Make
       run: |
