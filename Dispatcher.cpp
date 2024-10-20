@@ -593,7 +593,7 @@ void Dispatcher::handleReverse(Device & d) {
 		result & r = d.m_memResult[i];
 	
 		if (r.found > 0) {
-			uint a[3];
+			unsigned int a[3];
 			const cl_uchar* h = r.foundHash;
 			for (size_t i = 0; i < 3; ++i) {
 				a[i] = 0;
