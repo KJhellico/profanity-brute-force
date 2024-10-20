@@ -123,7 +123,7 @@ cl_ulong4 Dispatcher::Device::createSeed() {
 #else
 	// Randomize private keys
 	std::random_device rd;
-	uint seed = rd();
+	unsigned int seed = rd();
 	seed = (1 << 18) + (seed) % (1 << 18);
 	std::mt19937_64 eng(seed);
 	std::uniform_int_distribution<cl_ulong> distr;
